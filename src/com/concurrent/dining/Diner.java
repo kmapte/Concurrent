@@ -55,6 +55,14 @@ public class Diner implements Runnable {
 		return false;
 	}
 
+	public int getEatingCounter() {
+		return eatingCounter;
+	}
+
+	public void setEatingCounter(int eatingCounter) {
+		this.eatingCounter = eatingCounter;
+	}
+
 	@Override
 	public String toString() {
 		return "Diner-" + this.id;
