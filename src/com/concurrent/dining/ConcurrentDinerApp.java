@@ -17,7 +17,7 @@ public class ConcurrentDinerApp {
 			for (int i = 0; i < Constants.NUMBER_OF_FORKS; i++) {
 				dinnerForks[i] = new DinnerFork(i);
 			}
-			
+			// see the table sitting with forks in the attached diagram DinersLayoutWithForks.jpg
 			for (int i = 0; i < Constants.NUMBER_OF_DINERS; i++) {
 				diners[i] = new Diner(i,dinnerForks[i] , dinnerForks[(i+1)%Constants.NUMBER_OF_FORKS]); // counter clock wise assingment
 				executorService.execute(diners[i]);
